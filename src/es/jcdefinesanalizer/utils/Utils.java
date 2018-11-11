@@ -106,7 +106,7 @@ public class Utils {
         int index = 0;
         int lastIndex = 0;
         
-        orgLine = line.replaceAll(" ", "").replaceAll("\r", " ").replaceAll("\t", " ");
+        orgLine = line.replaceAll(" ", "").replaceAll("\r", "").replaceAll("\t", "");
 
         orgLineSize = orgLine.length();
 
