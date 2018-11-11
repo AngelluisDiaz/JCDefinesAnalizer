@@ -340,10 +340,18 @@ public class ResultFileMngt {
                 
                 defineName = (String) em.nextElement();
                 
+                if(defineName.equals(ownerNameKey)){
+                    continue;
+                }
+                
                 value = prop.getProperty(defineName, null);
                 
                 if (value == null) {
                     throw new Exception("Properties file has defines without value.");
+                }
+                
+                if(!this.ownerNameBeforeDefines.equals("")){
+                    defineName = defineName.substring(ownerNameBeforeDefines.length());
                 }
                 
                 define = new Define(defineName);
