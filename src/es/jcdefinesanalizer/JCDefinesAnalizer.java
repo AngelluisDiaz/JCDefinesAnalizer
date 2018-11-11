@@ -133,7 +133,7 @@ public class JCDefinesAnalizer {
         String line;
         RandomAccessFile buffer_wr;
         
-        buffer_wr = new RandomAccessFile(hFilePath, "rw");
+        buffer_wr = new RandomAccessFile(hFilePath, "r");
         
         do {
             line = readNewLineFromFile(buffer_wr);
